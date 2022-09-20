@@ -1,8 +1,6 @@
 package org.example.github.model.entity.github;
 
 import org.springframework.util.CollectionUtils;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -44,13 +42,6 @@ public class Repository {
 
     public void setFork(boolean fork) {
         this.fork = fork;
-    }
-
-    public void addBranch(Branch branch) {
-        if (this.branches == null) {
-            this.branches = new ArrayList<>();
-        }
-        this.branches.add(branch);
     }
 
     public org.example.github.model.domain.Repository toDomain() {

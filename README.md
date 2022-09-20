@@ -11,4 +11,4 @@
 
 ## Swagger :
 
-1. Once the Application is started and running, access the swagger UI by launching the URL http://localhost:8081/webjars/swagger-ui/index.html in a new browser window.
+1. Once the Application is started and running, access the swagger UI by launching the URL http://localhost:8081/swagger-ui.html in a new browser window.

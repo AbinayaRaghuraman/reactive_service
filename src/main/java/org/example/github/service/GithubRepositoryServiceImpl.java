@@ -5,6 +5,7 @@ import org.example.github.model.entity.github.Branch;
 import org.example.github.model.entity.github.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
 import reactor.core.publisher.Flux;
 
 @Service
@@ -31,7 +32,8 @@ public class GithubRepositoryService {
         return client.get()
                 .uri(GET_USER_REPOS, repositoryName)
                 .retrieve()
-                .bodyToFlux(Repository.class);
+                .bodyToFlux(Repository.class)
+                .onErrorResume(e -> Flux.error(new WebClientResponseException(404, "There is no user with the given username. Check if the username is valid.", null, null, null)));
     }
 
     private Flux<Branch> getBranches(Repository repository) {

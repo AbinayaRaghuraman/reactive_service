@@ -41,4 +41,13 @@ public class Repository {
         this.branches = branches;
     }
 
+
+    public Repository(String name, String ownerName, List<Branch> branches) {
+        this.name = name;
+        this.ownerName = ownerName;
+        this.branches = branches;
+    }
+
+    public Repository() {
+    }
 }

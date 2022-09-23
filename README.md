@@ -23,3 +23,7 @@
 
    The above command will create a new docker container with the previously created image. The port 8082 is mapped to access outside the container.
 4. Once the container is running, access the swagger UI by launching the URL in a new browser window http://localhost:8082/swagger-ui.html
+
+## Test Scenarios :
+
+1. Refer **_Test_Case_Scenarios.docx_** document placed in the project path for the test scenarios along with screenshots.
